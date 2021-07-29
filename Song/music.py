@@ -83,3 +83,18 @@ def a(client, message):
             ydl.process_info(info_dict)
         rep = f'🎧 𝐓𝐢𝐭𝐥𝐞 : {title[:35]}\n⏳ 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 : {duration}\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : Youtube\n👁‍🗨 𝐕𝐢𝐞𝐰𝐬 : {views}\n\n💌 𝐁𝐲 : @SongPlayRoBot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
+        for i in range(len(dur_arr)-1, -1, -1):
+            dur += (int(dur_arr[i]) * secmul)
+            secmul *= 60
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
+        m.delete()
+    except Exception as e:
+        m.edit('❌ 𝐄𝐫𝐫𝐨𝐫\n\n Report This Erorr To Fix @Peterparker6 🔥')
+        print(e)
+    try:
+        os.remove(audio_file)
+        os.remove(thumb_name)
+    except Exception as e:
+        print(e)
+
+bot.run()
