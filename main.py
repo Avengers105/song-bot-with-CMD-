@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 import os
-from config import Config
+from Config import Config
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
