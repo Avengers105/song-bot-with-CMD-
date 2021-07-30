@@ -1,4 +1,3 @@
-from . import bot
 from pyrogram import Client, filters
 
 import youtube_dl
@@ -97,5 +96,3 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-
-bot.run()
