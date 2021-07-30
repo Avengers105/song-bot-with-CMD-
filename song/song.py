@@ -1,10 +1,20 @@
-from pyrogram import Client, filters
-
-import youtube_dl
-from youtube_search import YoutubeSearch
-import requests
-
 import os
+import logging
+import requests
+import aiohttp
+import youtube_dl
+from pyrogram import filters, Client, idle
+from youtube_search import YoutubeSearch
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from config import API_ID, API_HASH, BOT_TOKEN
+
+# logging
+bot = Client(
+   "Music-Bot",
+   api_id=API_ID,
+   api_hash=API_HASH,
+   bot_token=BOT_TOKEN,
+)
 
 ## Extra Fns -------
 
