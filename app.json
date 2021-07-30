@@ -1,16 +1,13 @@
 {
-    "name": "Song downloader bot",
+    "name": "Music-Bot",
     "description": "A bot that can download songs.",
     "logo": "https://telegra.ph/file/45d311505e7d3954fb9dc.jpg",
     "keywords": [
-        "JESongBot",
-        "Song Downloader",
+        "Avengers",
+        "Music-Bot",
         "Telegram Bot",
-        "JE Bots"
+        "Kannan"
     ],
-    "website": "https://janindu.com",
-    "repository": "https://github.com/ImJanindu/JESongBot",
-    "success_url": "https://t.me/Infinity_BOTs",
     "env": {
         "BOT_TOKEN": {
             "description": "Your Telegram Bot Token from @BotFather",
