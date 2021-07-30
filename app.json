@@ -1,24 +1,35 @@
 {
-    "name": "Music-bot",
-    "description": "A Modular telegram song bot.",
-    "repository": "https://github.com/Avengers105/Music-Bot",
+    "name": "Song downloader bot",
+    "description": "A bot that can download songs.",
+    "logo": "https://telegra.ph/file/45d311505e7d3954fb9dc.jpg",
     "keywords": [
-       
-        "telegram bot",
-        "pyrogram"
+        "JESongBot",
+        "Song Downloader",
+        "Telegram Bot",
+        "JE Bots"
     ],
+    "website": "https://janindu.com",
+    "repository": "https://github.com/ImJanindu/JESongBot",
+    "success_url": "https://t.me/Infinity_BOTs",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your Bot token from @Botfather"
-        },
-        
-    },
-    "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "heroku/python"
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
         }
-    ]
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
