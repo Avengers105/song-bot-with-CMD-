@@ -6,7 +6,7 @@ import youtube_dl
 from pyrogram import filters, Client, idle
 from youtube_search import YoutubeSearch
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from Config import API_ID, API_HASH, BOT_TOKEN
+from config import API_ID, API_HASH, BOT_TOKEN
 
 # logging
 bot = Client(
