@@ -36,8 +36,8 @@ async def start(_, message):
         )
     )
 
-@bot.on_message(filters.command("s") & ~filters.edited)
-async def s(_, message):
+@bot.on_message(filters.command(['s']))
+def a(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
