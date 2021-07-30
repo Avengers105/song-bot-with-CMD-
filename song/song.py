@@ -15,9 +15,7 @@ bot = Client(
    api_hash=API_HASH,
    bot_token=BOT_TOKEN,
 )
-
 ## Extra Fns -------
-
 # Convert hh:mm:ss to seconds
 def time_to_seconds(time):
     stringt = str(time)
@@ -25,7 +23,7 @@ def time_to_seconds(time):
 
 
 ## Commands --------
-@Client.on_message((filters.command(['start']))
+@bot.on_message((filters.command(['start']))
 def start(client, message):
     Avengersbot = f'👋 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n𝗜 𝗔𝗺 🎸𝐒𝐨𝐧𝐠 𝐏𝐥𝐚𝐲 𝐁𝐨𝐭[🎶\n\n𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗡𝗮𝗺𝗲 𝗢𝗳 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁... 😍🥰🤗\n\n𝗧𝘆𝗽𝗲 /s 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. /s Faded'
     message.reply_text(
@@ -41,7 +39,7 @@ def start(client, message):
         )
     )
 
-@Client.on_message((filters.command(['s']))
+@bot.on_message((filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
