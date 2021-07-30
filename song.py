@@ -28,7 +28,6 @@ def start_msg(name):
     message.reply_text(
         text=Avengersbot, 
         quote=False,
-return msg
         reply_markup=InlineKeyboardMarkup(
             [
                 [
