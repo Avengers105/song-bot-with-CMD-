@@ -37,7 +37,7 @@ async def start(_, message):
     )
 
 @bot.on_message(filters.command("s") & ~filters.edited)
-async def song(_, message):
+async def s(_, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
