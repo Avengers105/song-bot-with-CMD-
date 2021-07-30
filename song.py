@@ -39,7 +39,7 @@ def a(client, message):
         )
     )
 
-@bot.on_message((filters.command(['s']))
+@Client.on_message((filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
