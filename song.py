@@ -22,11 +22,10 @@ def time_to_seconds(time):
 
 
 ## Commands --------
-def start_msg(name):
-    msg = f'👋 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n𝗜 𝗔𝗺 🎸𝐒𝐨𝐧𝐠 𝐏𝐥𝐚𝐲 𝐁𝐨𝐭[🎶\n\n𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗡𝗮𝗺𝗲 𝗢𝗳 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁... 😍🥰🤗\n\n𝗧𝘆𝗽𝗲 /s 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. /s Faded'
-    message.reply_text(
-        text=Avengersbot, 
-        quote=False,
+@bot.on_message(filters.command("start") & ~filters.edited)
+async def start(_, message):
+   if message.chat.type == 'private':
+       await message.reply(👋 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n𝗜 𝗔𝗺 🎸𝐒𝐨𝐧𝐠 𝐏𝐥𝐚𝐲 𝐁𝐨𝐭[🎶\n\n𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗡𝗮𝗺𝗲 𝗢𝗳 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁... 😍🥰🤗\n\n𝗧𝘆𝗽𝗲 /s 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. /s Faded'
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -37,7 +36,8 @@ def start_msg(name):
         )
     )
 
-def help_msg(s):
+@bot.on_message(filters.command("s") & ~filters.edited)
+async def song(_, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
