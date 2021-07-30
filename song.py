@@ -38,8 +38,7 @@ def start_msg(name):
         )
     )
 
-@Client.on_message((filters.command(['s']))
-def a(client, message):
+def help_msg(s):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
