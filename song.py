@@ -24,7 +24,6 @@ def time_to_seconds(time):
 ## Commands --------
 @bot.on_message(filters.command("start") & ~filters.edited)
 async def start(_, message):
-   if message.chat.type == 'private':
        await message.reply("👋 𝗛𝗲𝗹𝗹𝗼 {}\n\n𝗜 𝗔𝗺 🎸𝐒𝐨𝐧𝐠 𝐏𝐥𝐚𝐲 𝐁𝐨𝐭[🎶](https://telegra.ph/file/c3c4ebdc70fa7a5510968.jpg)\n\n𝗦𝗲𝗻𝗱 𝗧𝗵𝗲 𝗡𝗮𝗺𝗲 𝗢𝗳 𝗧𝗵𝗲 𝗦𝗼𝗻𝗴 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁... 😍🥰🤗\n\n𝗧𝘆𝗽𝗲 /s 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `/s Believer`",
         reply_markup=InlineKeyboardMarkup(
             [
