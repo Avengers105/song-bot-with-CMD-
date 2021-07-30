@@ -1,7 +1,6 @@
 import os
 import logging
 import requests
-import aiohttp
 import youtube_dl
 from pyrogram import filters, Client, idle
 from youtube_search import YoutubeSearch
