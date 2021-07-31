@@ -35,7 +35,7 @@ async def start(client, message):
         )
     )
 
-@bot.on_message(filters.command(['s']))
+@bot.on_message(filters.command(['song']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
