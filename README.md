@@ -9,5 +9,5 @@ Demo : [Music-Bot💥](https://t.me/MusicDownloadv2bot)
 
 Report your problem along with your name to This [PERSON](https://t.me/Peterparker6) 👨🏻‍💻
 
-### Credits❤️
+### Thanks To❤️
 [Mine is Zarox](https://github.com/MineisZarox)
