@@ -1,1 +1,1 @@
-web: python3 song.py
+worker: python3 song.py
