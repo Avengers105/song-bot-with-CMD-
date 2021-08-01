@@ -1,7 +1,7 @@
-TgCrypto==1.2.2
-Pyrogram==1.2.9
+TgCrypto
+Pyrogram
 youtube-dl
 youtube_search
 requests
-youtube_search_python
-ffmpeg-python
+mutagen
+python-telegram-bot
