@@ -5,4 +5,5 @@ youtube_search
 requests
 python-telegram-bot
 mutagen
+avconv
 
