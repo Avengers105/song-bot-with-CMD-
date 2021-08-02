@@ -37,9 +37,7 @@ async def start(client, message):
 
 @bot.on_message(filters.text)
 def a(client, message):
-    query = ''
-    for i in message.command[1:]:
-        query += ' ' + str(i)
+    query=message.text
     print(query)
     m = message.reply('🔎 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝗼𝗻𝗴...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
