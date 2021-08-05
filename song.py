@@ -1,4 +1,5 @@
 import os
+import ffmpeg
 import logging
 import requests
 import youtube_dl
