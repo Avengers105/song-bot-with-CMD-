@@ -30,7 +30,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton('𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿', url='https://t.me/Peterparker6'),
-                    InlineKeyboardButton('𝗗𝗲𝗽𝗹𝗼𝘆', url='https://heroku.com/deploy?template=https://github.com/Avengers105/Music-Bot/tree/main')
+                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
                 ]
             ]
         )
