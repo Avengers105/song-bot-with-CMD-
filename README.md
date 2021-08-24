@@ -10,7 +10,7 @@
 
 #### Deploy With the Cammand "/s"
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Avengers105/song-bot-with-CMD/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Avengers105/song-bot-with-CMD-/tree/main)
 
 Reach me on Telegram [Peter Parker](https://t.me/Peterparker6) 👨🏻‍💻
 
