@@ -4,8 +4,11 @@
 
 ### Deploy to Heroku
 
+#Deploy without cammand
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Avengers105/Music-Bot/tree/main)
 
+#Deploy With the Cammand "/s"
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Avengers105/Music-Bot/tree/Without-cmd)
 
 Reach me on Telegram [Peter Parker](https://t.me/Peterparker6) 👨🏻‍💻
 
