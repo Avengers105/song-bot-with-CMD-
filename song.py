@@ -92,7 +92,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙[❎](https://telegra.ph/file/98e2d7b14538a6308127f.mp4)\n\n Report This Erorr To Fix @Peterparker6 ❤️')
+        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙[❎](https://telegra.ph/file/98e2d7b14538a6308127f.mp4)\n\n`Plesase Try Again Later`')
         print(e)
     try:
         os.remove(audio_file)
