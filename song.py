@@ -25,7 +25,7 @@ def time_to_seconds(time):
 ## Commands --------
 @bot.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("👋 𝗛𝗲𝗹𝗹𝗼\n\n𝐈 𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫[🎶](https://telegra.ph/file/c3c4ebdc70fa7a5510968.jpg)\n\n𝑺𝒆𝒏𝒕 𝒕𝒉𝒆 𝑵𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝐒𝐨𝐧𝐠 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕... 😍🥰🤗\n\nJust 𝗧𝘆𝗽𝗲 a 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `/s Believer`",
+       await message.reply("👋 𝗛𝗲𝗹𝗹𝗼\n\n𝐈 𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫[🎶](https://telegra.ph/file/92a1f08c6ca91e0e8c163.mp4)\n\n𝑺𝒆𝒏𝒕 𝒕𝒉𝒆 𝑵𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝐒𝐨𝐧𝐠 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕... 😍🥰🤗\n\n𝗝𝘂𝘀𝘁 𝗧𝘆𝗽𝗲 𝗮 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `/s Believer`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -34,6 +34,23 @@ async def start(client, message):
                 ]
             ]
         )
+    )
+
+@bot.on_message(filters.command(['help']))
+async def help(client, message):
+       await message.reply("<b>Simplest Way😂</b>\n\n<i>How many times have I said that just giving the name of a song is enough.🙄\nDo not expect any other help from me😠</i>\n\n<b>Eg :</b> `/s Vaathi Coming`",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
+                ]
+            ]
+        )
+    )
+
+@bot.on_message(filters.command(['about']))
+async def about(client, message):
+       await message.reply("➪<b>Name</b> : ✫<i>Music Downloader</i>\n➪<b>Developer</b> : ✫[𝘗𝘦𝘵𝘦𝘳 𝘗𝘢𝘳𝘬𝘦𝘳](https://t.me/Peterparker6)\n➪<b>Language</b> : ✫<i>Python3</i>\n➪<b>Server</b> : ✫[𝘏𝘦𝘳𝘰𝘬𝘶](https://heroku.com/)\n➪<b>Source Code</b> : ✫[𝘊𝘭𝘪𝘤𝘬 𝘏𝘦𝘳𝘦](https://github.com/Avengers105/Music-Bot)",
     )
 
 @bot.on_message(filters.command(['s']))
@@ -81,7 +98,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("🔎 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖺 𝗦𝗼𝗻𝗴 ♫︎ 𝖯𝗅𝖾𝖺𝗌𝖾 𝖶𝖺𝗂𝗍 𝖿𝗈𝗋 𝖲𝗈𝗆𝖾 𝖲𝖾𝖼𝗈𝗇𝖽𝗌[🚀](https://telegra.ph/file/33e209cb838912e8714c9.mp4)")
+    m.edit("`Uploading Your File,Please Wait for Some Seconds...`[🎧](https://telegra.ph/file/33e209cb838912e8714c9.mp4)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -95,7 +112,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙[❎](https://telegra.ph/file/98e2d7b14538a6308127f.mp4)\n\n`Plesase Try Again Later`')
+        m.edit('𝙁𝙖𝙞𝙡𝙚𝙙\n\n`Plesase Try Again Later`')
         print(e)
     try:
         os.remove(audio_file)
