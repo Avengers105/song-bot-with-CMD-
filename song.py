@@ -1,4 +1,3 @@
-import os
 import ffmpeg
 import logging
 import requests
@@ -6,15 +5,7 @@ import youtube_dl
 from pyrogram import filters, Client, idle
 from youtube_search import YoutubeSearch
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import API_ID, API_HASH, BOT_TOKEN
 
-# logging
-bot = Client(
-   "Music-Bot",
-   api_id=API_ID,
-   api_hash=API_HASH,
-   bot_token=BOT_TOKEN,
-)
 ## Extra Fns -------
 # Convert hh:mm:ss to seconds
 def time_to_seconds(time):
@@ -23,20 +14,23 @@ def time_to_seconds(time):
 
 
 ## Commands --------
-@bot.on_message(filters.command(['start']))
+@Client.on_message(filters.command(['start']))
 async def start(client, message):
-       await message.reply("👋 𝗛𝗲𝗹𝗹𝗼\n\n𝐈 𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫[🎶](https://telegra.ph/file/92a1f08c6ca91e0e8c163.mp4)\n\n𝑺𝒆𝒏𝒕 𝒕𝒉𝒆 𝑵𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝐒𝐨𝐧𝐠 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕... 😍🥰🤗\n\n𝗝𝘂𝘀𝘁 𝗧𝘆𝗽𝗲 𝗮 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `/s Believer`",
+       await message.reply("👋 𝗛𝗲𝗹𝗹𝗼\n\n𝐈 𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫[🎶](https://telegra.ph/file/92a1f08c6ca91e0e8c163.mp4)\n\n𝑺𝒆𝒏𝒕 𝒕𝒉𝒆 𝑵𝒂𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝐒𝐨𝐧𝐠 𝒀𝒐𝒖 𝑾𝒂𝒏𝒕... 😍🥰🤗\n<b>Also Support Inline Mode</b>\n\n𝗝𝘂𝘀𝘁 𝗧𝘆𝗽𝗲 𝗮 𝗦𝗼𝗻𝗴 𝗡𝗮𝗺𝗲\n\n𝐄𝐠. `/s Believer`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton('𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿', url='https://t.me/Peterparker6'),
                     InlineKeyboardButton('𝗦𝗼𝘂𝗿𝗰𝗲', url='https://github.com/Avengers105/Music-Bot')
+                ],
+                [
+                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
                 ]
             ]
         )
     )
 
-@bot.on_message(filters.command(['help']))
+@Client.on_message(filters.command(['help']))
 async def help(client, message):
        await message.reply("<b>Simplest Way😂</b>\n\n<i>How many times have I said that just giving the name of a song is enough.🙄\nDo not expect any other help from me😠</i>\n\n<b>Eg :</b> `/s Vaathi Coming`",
         reply_markup=InlineKeyboardMarkup(
@@ -48,12 +42,19 @@ async def help(client, message):
         )
     )
 
-@bot.on_message(filters.command(['about']))
+@Client.on_message(filters.command(['about']))
 async def about(client, message):
        await message.reply("➪<b>Name</b> : ✫<i>Music Downloader</i>\n➪<b>Developer</b> : ✫[𝘗𝘦𝘵𝘦𝘳 𝘗𝘢𝘳𝘬𝘦𝘳](https://t.me/Peterparker6)\n➪<b>Language</b> : ✫<i>Python3</i>\n➪<b>Server</b> : ✫[𝘏𝘦𝘳𝘰𝘬𝘶](https://heroku.com/)\n➪<b>Source Code</b> : ✫[𝘊𝘭𝘪𝘤𝘬 𝘏𝘦𝘳𝘦](https://github.com/Avengers105/Music-Bot)",
+       reply_markup=InlineKeyboardMarkup(
+           [
+               [
+                   InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
+               ]
+           ]
+        )
     )
 
-@bot.on_message(filters.command(['s']))
+@Client.on_message(filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
@@ -119,5 +120,3 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-
-bot.run()
